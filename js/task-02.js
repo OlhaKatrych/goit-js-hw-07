@@ -27,5 +27,17 @@ const images = [
 
 const list = document.querySelector(".gallery");
 
+function createMarkUp(arr) {
+
+  return arr.map(
+    (el) => `<li">
+  <img class="format" src="${el.url}" alt="${el.alt}">
+</li>`
+  ).join("")
+
+}
+
+list.insertAdjacentHTML('beforeend', createMarkUp(images))
+
 
 
