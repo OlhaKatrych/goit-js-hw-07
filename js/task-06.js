@@ -11,14 +11,12 @@ let size = 20;
 function handlerCreate() {
   const amount = Number(input.value);
   for (let i = 0; i < amount; i += 1) {
-    const arr = [];
     const div = document.createElement("div");
     size += 10;
     div.style.width = `${size}px`;
     div.style.height = `${size}px`;
     div.style.backgroundColor = getRandomHexColor();
     boxes.append(div);
-   
   }
 
   if (input.value > 100) {
@@ -26,12 +24,10 @@ function handlerCreate() {
   }
 
   input.value = 0;
-  
 }
 
 function handlerDestroy() {
   boxes.innerHTML = "";
- 
 }
 
 function getRandomHexColor() {
