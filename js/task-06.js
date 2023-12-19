@@ -10,7 +10,7 @@ function handlerCreate() {
   handlerDestroy();
 
   const amount = Number(input.value);
-  if (input.value > 100) {
+  if (amount > 0 && amount < 100) {
     for (let i = 0; i < amount; i += 1) {
       let size = 30 + i * 10;
       const div = document.createElement("div");
@@ -23,7 +23,6 @@ function handlerCreate() {
     }
   }
 }
-
 function handlerDestroy() {
   boxes.innerHTML = "";
 }
