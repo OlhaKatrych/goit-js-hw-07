@@ -5,9 +5,5 @@ input.addEventListener("input", handlerInput);
 
 function handlerInput(evt) {
   const inputTarget = evt.target.value.trim();
-  output.textContent = inputTarget;
-
-  if (inputTarget === "" || inputTarget === " ") {
-    output.textContent = "Anonymous";
-  }
+  output.textContent = inputTarget === "" ? "Anonymous" : inputTarget;
 }
