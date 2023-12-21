@@ -10,7 +10,7 @@ function handlerCreate() {
   handlerDestroy();
 
   const amount = Number(input.value);
-  if (amount > 0 && amount < 100) {
+  if (amount >= 1 && amount <= 100) {
     for (let i = 0; i < amount; i += 1) {
       let size = 30 + i * 10;
       const div = document.createElement("div");
@@ -19,8 +19,8 @@ function handlerCreate() {
       div.style.height = `${size}px`;
       div.style.backgroundColor = getRandomHexColor();
       boxes.append(div);
-      input.value = 0;
     }
+    input.value = 0;
   }
 }
 function handlerDestroy() {

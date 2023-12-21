@@ -13,7 +13,8 @@ function handlerSubmit(evt) {
   };
   if (data.email === "" || data.password === "") {
     alert("All form fields must be filled in");
+  } else {
+    console.log(data);
+    form.reset();
   }
-  console.log(data);
-  form.reset();
 }
